@@ -14,6 +14,7 @@ export default class NewBeer extends Component {
       })
     }
 
+    // post to the API
     sendBeerToApi = (e) => {
       e.preventDefault()
       axios.post("https://ih-beers-api2.herokuapp.com/beers/new", {name: this.state.name})
