@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import axios from "axios" 
 import {Switch, Link, Route} from "react-router-dom"
+import Beers from "./components/beers/beers"
+import Random from "./components/random/random"
+import NewBeer from "./components/new-beer/newBeer"
 
 class App extends Component {
 
@@ -32,6 +35,12 @@ getRandomBeer = () => {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <Switch>
+          <Route path="/beers" component={Beers} />
+          <Route path="/random-beer" component={Random} />
+          <Route path="/new-beer" component={NewBeer} />
+        </Switch>
       </div>
     );
   }
