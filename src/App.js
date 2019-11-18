@@ -9,21 +9,21 @@ import NewBeer from "./components/new-beer/newBeer"
 
 class App extends Component {
 
-componentDidMount() {
-  this.getAllBeers();
-}
+  componentDidMount() {
+    // this.getAllBeers();
+  }
 
-getAllBeers = () => {
-  axios.get("https://ih-beers-api2.herokuapp.com/beers").then(allTheBeers => {
-    console.log(allTheBeers);
-  })
-}
+  // getAllBeers = () => {
+  //   axios.get("https://ih-beers-api2.herokuapp.com/beers").then(allTheBeers => {
+  //     console.log(allTheBeers);
+  //   })
+  // }
 
-getRandomBeer = () => {
-  axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then(randomBeer => {
-    console.log(randomBeer);
-  })
-}
+  getRandomBeer = () => {
+    axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then(randomBeer => {
+      console.log(randomBeer);
+    })
+  }
 
   render() {
     return (
@@ -37,9 +37,9 @@ getRandomBeer = () => {
         </p> */}
 
         <nav>
-          <Link to="/beers">Beers</Link>
-          <Link to="/random-beer">Random</Link>
-          <Link to="/new-beer">New Beer</Link>
+          <Link to="/beers">Beers |</Link>
+          <Link to="/random-beer"> Random |</Link>
+          <Link to="/new-beer"> New Beer</Link>
         </nav>
 
         <Switch>
