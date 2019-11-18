@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import axios from "axios" 
 import {Switch, Link, Route} from "react-router-dom"
@@ -28,13 +28,19 @@ getRandomBeer = () => {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> */}
+
+        <nav>
+          <Link to="/beers">Beers</Link>
+          <Link to="/random-beer">Random</Link>
+          <Link to="/new-beer">New Beer</Link>
+        </nav>
 
         <Switch>
           <Route path="/beers" component={Beers} />

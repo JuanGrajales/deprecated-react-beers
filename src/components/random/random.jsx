@@ -4,7 +4,7 @@ export default class Random extends Component {
   render() {
     return (
       <div>
-        
+        Random
       </div>
     )
   }
